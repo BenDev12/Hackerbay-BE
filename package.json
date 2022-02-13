@@ -1,0 +1,63 @@
+{
+    "name": "hackerbay-backend",
+    "version": "1.0.0",
+    "description": "microservice",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha --require @babel/register --watch 'app/__test__/**/*.spec.js' ",
+        "start": "NODE_ENV=development nodemon",
+        "eslint": "eslint app/index.js",
+        "node-server": "babel-node app/index.js",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "format:write": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "keywords": [
+        "noode",
+        "js",
+        "Docker",
+        "microservice"
+    ],
+    "author": "Benard Onyango",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/plugin-transform-runtime": "^7.16.4",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-pino-logger": "^7.0.0",
+        "fast-json-patch": "^3.1.0",
+        "image-downloader": "^4.0.3",
+        "joi": "^17.5.0",
+        "jsonwebtoken": "^8.5.1",
+        "module-alias": "^2.2.2",
+        "pino-pretty": "^7.2.0",
+        "sharp": "^0.29.3",
+        "supertest": "^6.1.6",
+        "swagger-ui-express": "^4.2.0",
+        "uuidv4": "^6.2.12"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/node": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "@babel/register": "^7.16.0",
+        "chai": "^4.3.4",
+        "eslint": "^8.4.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "mocha": "^9.1.3",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.1"
+    },
+    "_moduleAliases": {
+        "@root": ".",
+        "@controllers": "app/controllers/",
+        "@errors": "app/errors",
+        "@schema": "app/schema",
+        "@utils": "app/utils",
+        "@middlewares": "app/middlewares",
+        "@routes": "app/routes"
+    }
+}

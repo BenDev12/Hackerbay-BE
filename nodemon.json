@@ -1,0 +1,6 @@
+{
+    "ignore": ["**/*.test.js", "**/*.spec.js", ".git", "node_modules"],
+    "watch": ["app"],
+    "exec": "npm run eslint && npm run node-server ",
+    "ext": "js"
+}

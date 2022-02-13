@@ -1,0 +1,61 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Hackerbay API",
+      "version": "1.0.0",
+      "description": "Hackerbay Nodejs Server",
+      "contact": {
+        "email": "benardjovita2012@gmail.com",
+        "name": "Benard Onyango"
+      }
+    },
+    "servers": [
+      {
+        "url": "http://localhost:4000/api/v1"
+      }
+    ],
+    "tags":[
+        {
+            "name": "User",
+            "description": "User End points"
+          }
+    ],
+    "path":{
+        "/login": {
+            "post": {
+                "tags": ["User"],
+                "summary": "User login",
+                "operationId": "login",
+                "requestBody": {
+                  "description": "user signing in",
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      
+                    }
+                  }
+                },
+                "responses": {
+                  "200": {
+                    "description": "login successful",
+                    "content": {
+                      "application/json": {
+                       
+                      }
+                    }
+                  },
+                  "400": {
+                    "description": "Bad request",
+                    "content": {
+                      "application/json": {
+                        
+                      }
+                    }
+                  }
+                }
+              }
+        }
+    }
+
+    
+}
